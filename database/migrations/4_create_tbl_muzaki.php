@@ -16,6 +16,10 @@ return new class extends Migration
            $table->string('name');
            $table->string('phone');
            $table->string('address');
+           $table->string('jumlah_hak');
+           $table->string('no_telp')->nullable();
+           $table->string('no_kk')->unique();
+           
             $table->unsignedBigInteger('id_masjid');
            $table->timestamps();
 

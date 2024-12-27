@@ -26,7 +26,7 @@
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Profile</th>
-                                <th class="text-center">Actions</th>
+                                <th class="text-center">Aksi</th>
                                 <th class="text-center">status Actions</th>
                             </tr>
                         </thead>

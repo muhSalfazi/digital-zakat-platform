@@ -15,8 +15,11 @@ return new class extends Migration
            $table->id();
            $table->string('name');
            $table->string('address');
-           $table->enum('status', ['diterima', 'belum'])->default('belum');
-           $table->unsignedBigInteger('id_kategori');
+           $table->string('jumlah_hak');
+           $table->string('no_telp')->nullable();
+           $table->string('no_kk')->unique();
+           
+            $table->unsignedBigInteger('id_kategori');
           $table->timestamps();
 
           $table->foreign('id_kategori')->references('id')->on('tbl_kategori_penerima')->onDelete('cascade');

@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AmilController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\MasjidController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,5 +50,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/createKategori', [KategoriController::class, 'store'])->name('admin.kategori.store');
     Route::delete('/deletekategori/{id}', [KategoriController::class, 'destroy'])->name('admin.kategori.delete');
     Route::put('/kategori/{id}', [KategoriController::class, 'update'])->name('admin.kategori.update');
+    // masjid
+    Route::get('/manage-masjid', [MasjidController::class, 'index'])->name('admin.masjid.index');
+    Route::post('/createmasjid', [MasjidController::class, 'store'])->name('admin.masjid.store');
+    Route::delete('/deltemasjid/{id}', [MasjidController::class, 'destroy'])->name('admin.masjid.delete');
+    Route::put('/masjid/{id}', [MasjidController::class, 'update'])->name('admin.masjid.update');
 
 });

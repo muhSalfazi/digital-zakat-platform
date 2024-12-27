@@ -16,7 +16,7 @@ class KategoriController extends Controller
       // Mengambil semua kategori dan menghitung jumlah mustahik di setiap kategori
       $kategoriList = Kategori::withCount('mustahik')->get();
 
-      return view('kategori.index', ['kategoriList' => $kategoriList]);
+      return view('admin.kategori', ['kategoriList' => $kategoriList]);
     }
 
 

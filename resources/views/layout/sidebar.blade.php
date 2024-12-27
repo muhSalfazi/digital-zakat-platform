@@ -54,6 +54,12 @@
                 <span>Kategori</span>
             </a>
         </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ route('admin.masjid.index') }}">
+                <i class="bi bi-buildings-fill"></i>
+                <span>Masjid</span>
+            </a>
+        </li>
     @endif
 
 

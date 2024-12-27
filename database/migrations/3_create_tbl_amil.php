@@ -18,7 +18,6 @@ return new class extends Migration
              $table->string('address');
              $table->string('imageProfile')->nullable();
              $table->unsignedBigInteger('id_amil')->nullable();
-            //  $table->enum('status', ['aktif', 'non-aktif'])->default('aktif');
              $table->timestamps();
 
              $table->foreign('id_amil')->references('id')->on('tbl_users')->onDelete('cascade');
